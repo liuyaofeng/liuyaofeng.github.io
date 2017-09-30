@@ -1,0 +1,77 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link href="layui/css/layui.css" rel="stylesheet" />
+<link href="css/index.css" rel="stylesheet" />
+<!--全局样式表-->
+<link href="css/global.css" rel="stylesheet" />
+<script src="plugins/jquery/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="layui/layui.js"></script>
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet" />
+<link rel="shortcut icon" href="img/index/favicon.ico" type="image/x-icon" />
+<title>LYn - 个人博客</title>
+<meta http-equiv="keywords" content="LYn,个人博客,JAVA技术分享,程序员博客"/>
+<meta http-equiv="description" content="LYn，记录博主学习和成长之路，分享JAVA方面技术和源码"/>
+<meta http-equiv="Content-Type" content="text/html; Charset=utf-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+<script type="text/javascript">
+  
+</script>
+</head>
+ <!-- 导航 -->
+     <nav class="blog-nav layui-header">
+        <div class="blog-container">
+			<a class="blog-logo" href="/">Awesome</a>
+            <!-- 导航菜单 -->
+            <ul class="layui-nav" lay-filter="nav">
+                <li class="layui-nav-item    layui-this   ">
+                    <a href=""><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
+                </li>
+                <li class="layui-nav-item  ">
+                    <a href="entry/article/article.txt"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
+                </li>
+                <li class="layui-nav-item  ">
+                    <a href="entry/resource/resource.txt"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a>
+                </li>
+                <li class="layui-nav-item ">
+                    <a href="entry/timeline/timeline.txt"><i class="fa fa-hourglass-half fa-fw"></i>&nbsp;点点滴滴</a>
+                </li>
+                <li class="layui-nav-item ">
+                    <a href="entry/about/about.txt"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
+                </li>
+            </ul>
+            <!-- 手机和平板的导航开关 -->
+            <a class="blog-navicon" href="javascript:;">
+                <i class="fa fa-navicon"></i>
+            </a>
+        </div>
+    </nav>
+	<div class="blog-body">
+	   <!-- canvas -->
+        <canvas id="canvas-banner" style="background: #393D49;" width="1590" height="67"></canvas>
+        <!--为了及时效果需要立即设置canvas宽高，否则就在home.js中设置-->
+        <script type="text/javascript">
+            var canvas = document.getElementById('canvas-banner');
+            canvas.width = window.document.body.clientWidth - 10;//减去滚动条的宽度
+            if (screen.width >= 992) {
+                canvas.height = window.innerHeight * 1 / 3;
+            } else {
+                canvas.height = window.innerHeight * 2 / 7;
+            }
+        </script>
+	</div>
+    <div class="blog-foot">
+	   <img src="img/index/home-bg.jpg" alt="" width="1600" height="461" />
+    </div>
+     <!--遮罩-->
+    <div class="blog-mask animated layui-hide"></div>    
+    <!-- 本页脚本 -->
+    <script src="js/home.js"></script>
+</body>
+</html>
