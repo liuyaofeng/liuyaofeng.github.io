@@ -1,0 +1,196 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link href="layui/css/layui.css" rel="stylesheet" />
+<link href="css/index.css" rel="stylesheet" />
+<!--全局样式表-->
+<link href="css/global.css" rel="stylesheet" />
+<script src="plugins/jquery/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="layui/layui.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
+<!-- 全局脚本 -->
+<script src="js/global.js"></script>
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet" />
+<link rel="shortcut icon" href="img/index/favicon.ico" type="image/x-icon" />
+<title>LYn - 点点滴滴</title>
+<meta http-equiv="keywords" content="LYn,个人博客,JAVA技术分享,程序员博客"/>
+<meta http-equiv="description" content="LYn，记录博主学习和成长之路，分享JAVA方面技术和源码"/>
+<meta http-equiv="Content-Type" content="text/html; Charset=utf-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+<!-- 本页样式表 -->
+<link href="css/article.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+<link rel="stylesheet" type="text/css" href="css/examples.css" />
+<!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+<script type="text/javascript">
+    var deleteLog = false;
+        $(document).ready(function() {
+            $('#pagepiling').pagepiling({
+                menu: '#menu',
+                anchors: ['page1', 'page2', 'page3'],
+                sectionsColor: ['#2C3E50', '#2C3E50', '#2C3E50'],
+                onLeave: function(index, nextIndex, direction){
+                    if(deleteLog){
+                        $('#callbacksDiv').html('');
+                    }
+                   // $('#callbacksDiv').append('<p>onLeave - index:' + index + ' nextIndex:' + nextIndex + ' direction:' + direction + '</p>')
+                },
+                afterRender: function(){
+                    //$('#callbacksDiv').append('<p>afterRender</p>');
+                },
+                afterLoad: function(anchorLink, index){
+                  //  $('#callbacksDiv').append('<p>afterLoad - anchorLink:' + anchorLink + " index:" + index + '</p>');
+                    //section 2
+                    if(index == 2){
+                        //moving the image
+                        $('#section2').find('.intro').delay(100).animate({
+                            left: '0%'
+                        }, 1500, 'easeOutExpo', function(){
+                            $('#section2').find('p').first().fadeIn(700, function(){
+                                $('#section2').find('p').last().fadeIn(600);
+                            });
+                        });
+                    }
+
+                    //section 3
+                    if(anchorLink == 'page3'){
+                        //section 3
+                        $('#section3').find('.intro').delay(100).animate({
+                                left: '0%'
+                        }, 1500, 'easeOutExpo');
+                    }
+                    deleteLog = true;
+                }
+            });
+        });
+    </script>
+
+    <style>
+    #section2 .intro{
+        left: -150%;
+        position: relative;
+    }
+    #section2 p{
+        display: none;
+    }
+    #section3 .intro{
+        left: 140%;
+        position: relative;
+    }
+    </style>
+</script>
+</head>
+<body>
+ <!-- 导航 -->
+     <nav class="blog-nav layui-header">
+        <div class="blog-container">			
+			<a class="blog-logo" href="index.html">Awesome</a>
+            <!-- 导航菜单 -->
+            <ul class="layui-nav" lay-filter="nav">
+                <li class="layui-nav-item">
+                    <a href="index.html"><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
+                </li>
+                <li class="layui-nav-item ">
+                    <a href="#"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
+                </li>
+                <li class="layui-nav-item  ">
+                    <a href="#"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a>
+                </li>
+                <li class="layui-nav-item layui-this   ">
+                    <a href="timeline.html"><i class="fa fa-hourglass-half fa-fw"></i>&nbsp;点点滴滴</a>
+                </li>
+                <li class="layui-nav-item ">
+                    <a href="#"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
+                </li>
+            </ul>
+            <!-- 手机和平板的导航开关 -->
+            <a class="blog-navicon" href="javascript:;">
+                <i class="fa fa-navicon"></i>
+            </a>
+        </div>
+    </nav>
+    <ul id="menu">
+        <li data-menuanchor="page1" class="active"><a href="#page1">Page 1</a></li>
+        <li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
+        <li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
+    </ul>
+    <div style="position:fixed;top:50px;left:50px;color:white;z-index:999;" id="callbacksDiv"></div>
+
+    <div id="pagepiling">
+        <div class="section" id="section1">  
+            <img src="http://welphen.cn/upload/image/20170921/8e43808a63e1483fa5d4104595fe1c56.jpg" alt="时间弄人">
+        </div>
+        <div class="section" id="section2">
+            <div class="intro">
+                <img src="http://welphen.cn/upload/image/20170921/8e43808a63e1483fa5d4104595fe1c56.jpg" alt="时间弄人">
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <div class="intro">
+               <img src="http://welphen.cn/upload/image/20170921/8e43808a63e1483fa5d4104595fe1c56.jpg" alt="时间弄人">
+            </div>
+        </div>
+    </div>
+
+
+		<div class="blog-body">
+			<div class="blog-container">
+			</div>          
+	            
+		</div>
+		
+
+ </div>
+    <!-- 底部 -->
+   	<footer class="blog-footer">
+	    <p><span>Copyright</span><span>&copy;</span><span>2017</span><a href="https://liuyaofeng.github.io/">LYn 's Blog</a><span>Design By LYF</span></p>
+    </footer>
+    <!--侧边导航-->
+    <ul class="layui-nav layui-nav-tree layui-nav-side blog-nav-left layui-hide" lay-filter="nav">
+        <li class="layui-nav-item ">
+            <a href="index.html"><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="#"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="#"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a>
+        </li>
+        <li class="layui-nav-item layui-this">
+            <a href="timeline.html"><i class="fa fa-road fa-fw"></i>&nbsp;点点滴滴</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="#"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
+        </li>
+    </ul>
+    <!--分享窗体-->
+    <div class="blog-share layui-hide">
+        <div class="blog-share-body">
+            <div style="width: 200px;height:100%;">
+                <div class="bdsharebuttonbox">
+                    <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                    <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                    <a class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    <a class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!--遮罩-->
+    <div class="blog-mask animated layui-hide"></div>    
+</body>
+</html>
+
+  
+
