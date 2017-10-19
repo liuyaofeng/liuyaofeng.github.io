@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="referrer" content="always" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link href="../../layui/css/layui.css" rel="stylesheet" />
+<link href="../../css/index.css" rel="stylesheet" />
+<!--全局样式表-->
+<link href="../../css/global.css" rel="stylesheet" />
+<script src="../../plugins/jquery/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<!-- 全局脚本 -->
+<script src="../../js/global.js"></script>
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/animate.min.css" rel="stylesheet" />
+<link rel="shortcut icon" href="../../img/index/favicon.ico" type="image/x-icon" />
+<title>LYn - 文章专栏</title>
+<meta http-equiv="keywords" content="LYn,个人博客,JAVA技术分享,程序员博客"/>
+<meta http-equiv="description" content="LYn，记录博主学习和成长之路，分享JAVA方面技术和源码"/>
+<meta http-equiv="Content-Type" content="text/html; Charset=utf-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+<link rel="stylesheet" href="../../css/jquery.pagination.css" />
+<script src="../../js/jquery.pagination.min.js"></script>
+
+<!-- 本页样式表 -->
+<link href="../../css/article.css" rel="stylesheet" />
+<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				font-family: "微软雅黑";
+				background: #eee;
+			}
+			
+			button {
+				display: inline-block;
+				padding: 6px 12px;
+				font-weight: 400;
+				line-height: 1.42857143;
+				text-align: center;
+				vertical-align: middle;
+				cursor: pointer;
+				border: 1px solid transparent;
+				border-radius: 4px;
+				border-color: #28a4c9;
+				color: #fff;
+				background-color: #5bc0de;
+				margin: 20px 20px 0 0;
+			}
+			
+			.box {
+				width: 800px;
+				margin: 100px auto 0;
+				height: 34px;
+			}
+			
+			.page {
+				width: 600px;
+			}
+			
+			.info {
+				width: 200px;
+				height: 34px;
+				line-height: 34px;
+			}
+			
+			.fl {
+				float: left;
+			}
+		</style>
+
+<script type="text/javascript">
+  	$(function() {
+				$("#pagination3").pagination({
+					currentPage: 3,
+					totalPage: 3,
+					callback: function(current) {
+						var currentpage=$("#currentpage").val();
+						if(current!=1){
+							window.location.href="article"+current+".html";
+						}else{
+							window.location.href="article.html";
+						}
+						//$("#current3").text(current)
+					}
+				});
+
+			});
+
+</script>
+</head>
+ <!-- 导航 -->
+     <nav class="blog-nav layui-header">
+        <div class="blog-container">
+			
+			<a class="blog-logo" href="index.html">Awesome</a>
+            <!-- 导航菜单 -->
+            <ul class="layui-nav" lay-filter="nav">
+                <li class="layui-nav-item  ">
+                    <a href="../../index.html"><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
+                </li>
+                <li class="layui-nav-item  layui-this ">
+                    <a href="article.html"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
+                </li>
+                <li class="layui-nav-item  ">
+                    <a href="#"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a>
+                </li>
+                <li class="layui-nav-item ">
+                    <a href="../timeline/timeline.html"><i class="fa fa-hourglass-half fa-fw"></i>&nbsp;点点滴滴</a>
+                </li>
+                <li class="layui-nav-item ">
+                    <a href="#"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
+                </li>
+            </ul>
+            <!-- 手机和平板的导航开关 -->
+            <a class="blog-navicon" href="javascript:;">
+                <i class="fa fa-navicon"></i>
+            </a>
+        </div>
+    </nav>
+		<div class="blog-body">
+			<div class="blog-container">
+			
+			<div class="blog-main">
+	            <div class="blog-main-left" id="article_list">
+					<div class="article shadow animated zoomIn">
+						<div class="article-left">
+							<img src="#" alt="本站正式成功发布上线！">
+						</div>
+						<div class="article-right">
+							<div class="article-title">
+								<span class="article_is_top">置顶</span> <a target="_blank"
+									href="../..//articles/detail/">本站正式成功发布上线！</a>
+							</div>
+							<div class="article-abstract">！</div>
+						</div>
+						<div class="clear"></div>
+						<div class="article-footer">
+							<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;2017年09月21日
+								00:46</span> <span class="article-author"><i class="fa fa-user"></i>&nbsp;&nbsp;LIUYAOFENG</span>
+							<span><i class="fa fa-tag"></i>&nbsp;&nbsp; <a target="_blank"
+								href="/articles/category/">JAVA</a></span> <span
+								class="article-viewinfo"><i class="fa fa-eye"></i>&nbsp;335</span> <span
+								class="article-viewinfo"><i class="fa fa-commenting"></i>&nbsp;11</span>
+						</div>
+					</div>
+
+					<div class="article shadow animated zoomIn">
+						<div class="article-left">
+							<img src="#" alt="本站正式成功发布上线！">
+						</div>
+						<div class="article-right">
+							<div class="article-title">
+								<span class="article_is_top">置顶</span> <a target="_blank"
+									href="../../articles/detail/">本站正式成功发布上线！</a>
+							</div>
+							<div class="article-abstract">！</div>
+						</div>
+						<div class="clear"></div>
+						<div class="article-footer">
+							<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;2017年09月21日
+								00:46</span> <span class="article-author"><i class="fa fa-user"></i>&nbsp;&nbsp;LIUYAOFENG</span>
+							<span><i class="fa fa-tag"></i>&nbsp;&nbsp; <a target="_blank"
+								href="../../articles/category/">JAVA</a></span> <span
+								class="article-viewinfo"><i class="fa fa-eye"></i>&nbsp;335</span> <span
+								class="article-viewinfo"><i class="fa fa-commenting"></i>&nbsp;11</span>
+						</div>
+					</div>
+				</div> 
+				<div class="blog-main-right">
+					<div class="article-category shadow animated fadeInRight">
+			        <div class="article-category-title">文章分类导航</div>
+			        <div class="clear">
+		        		<br/>2
+		        		<br/>2
+		        		<br/>2
+		        		<br/>2
+		        		<br/>2
+		        		<br/>2
+			        </div>
+	    		</div>
+				<div class="article-category shadow animated fadeInRight">
+			      <div class="article-category-title">作者推荐</div>
+			      <div class="clear">
+			        	<br/>2
+			        	<br/>2
+			        	<br/>2
+			        	<br/>2
+			        	<br/>2
+			        	<br/>2
+			        </div>
+	 			</div>    
+			</div>
+		
+		<div class="box">
+			<div id="pagination3" class="page fl"></div>
+			<div class="info fl">
+				<!--<p>当前页数：<span id="current3">3</span></p>-->
+				<input type="hidden" id="currentpage" value="3">
+			</div>
+		</div>
+ </div>
+    <!-- 底部 -->
+   	<footer class="blog-footer">
+	    <p><span>Copyright</span><span>&copy;</span><span>2017</span><a href="https://liuyaofeng.github.io/">LYn 's Blog</a><span>Design By LYF</span></p>
+    </footer>
+    <!--侧边导航-->
+    <ul class="layui-nav layui-nav-tree layui-nav-side blog-nav-left layui-hide" lay-filter="nav">
+        <li class="layui-nav-item layui-this">
+            <a href="../../index.html"><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="article.html"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="#"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="../timeline/timeline.html"><i class="fa fa-road fa-fw"></i>&nbsp;点点滴滴</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="#"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
+        </li>
+    </ul>
+    <!--分享窗体-->
+    <div class="blog-share layui-hide">
+        <div class="blog-share-body">
+            <div style="width: 200px;height:100%;">
+                <div class="bdsharebuttonbox">
+                    <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                    <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                    <a class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    <a class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!--遮罩-->
+    <div class="blog-mask animated layui-hide"></div>    
+</body>
+</html>
+
+  
+
