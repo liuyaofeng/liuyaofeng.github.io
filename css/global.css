@@ -652,7 +652,8 @@ body {
         }
 
     .blog-footer > p {
-        margin: 2px 0;
+        margin: 2px 0
+        ;
     }
 
         .blog-footer > p a,
@@ -1368,3 +1369,103 @@ body {
         display: block;
     }
 }
+.highlight {
+  margin: 0px;
+  display: block;
+  overflow-x: auto;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  line-height: 22.400000000000002px;
+}
+.highlight table {
+  margin: 0;
+  width: auto;
+}
+.highlight table td {
+  border: none;
+}
+.highlight table td.code {
+  padding-right: 20px;
+}
+.highlight .gutter pre {
+  color: #666;
+  text-align: right;
+  padding-right: 20px;
+}
+.highlight .gutter {
+  color: #afafaf !important;
+}
+.article-entry .highlight {
+  margin: 1.6em 0;
+}
+.article-entry .highlight .line {
+  height: 1.6em;
+}
+.highlight {
+  padding: 0.5em;
+  color: #333;
+}
+.highlight .code .comment,
+.highlight .code .meta {
+  color: #969896;
+}
+.highlight .code .string,
+.highlight .code .variable,
+.highlight .code .template-variable,
+.highlight .code .strong,
+.highlight .code .emphasis,
+.highlight .code .quote {
+  color: #df5000;
+}
+.highlight .code .keyword,
+.highlight .code .selector-tag,
+.highlight .code .type {
+  color: #a71d5d;
+}
+.highlight .code .literal,
+.highlight .code .symbol,
+.highlight .code .bullet,
+.highlight .code .attribute {
+  color: #0086b3;
+}
+.highlight .code .section,
+.highlight .code .name {
+  color: #63a35c;
+}
+.highlight .code .tag {
+  color: #333;
+}
+.highlight .code .title,
+.highlight .code .attr,
+.highlight .code .selector-id,
+.highlight .code .selector-class,
+.highlight .code .selector-attr,
+.highlight .code .selector-pseudo {
+  color: #795da3;
+}
+.highlight .code .addition {
+  color: #55a532;
+  background-color: #eaffea;
+}
+.highlight .code .deletion {
+  color: #bd2c00;
+  background-color: #ffecec;
+}
+.highlight .code .link {
+  text-decoration: underline;
+}
+.highlight .gutter .line {
+  border-right: 2px solid #6ce26c !important;
+  text-align: right !important;
+  padding: 0 0.5em 0 1em !important;
+}
+.highlight {
+  background: #f6f8fa none repeat scroll 0 0;
+  color: #4d4d4c;
+}
+.highlight {
+  color: #4d4d4c;
+  background: #f6f8fa;
+}
+
