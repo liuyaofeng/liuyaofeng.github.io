@@ -637,7 +637,7 @@ body {
 .blog-footer {
     text-align: center;
     border-top: 1px solid #009688;
-    margin-top: 15px;
+    //margin-top: 15px;
     background: #2F4056;
     padding: 5px 0;
     color: #d3d2d2;
